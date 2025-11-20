@@ -1,0 +1,153 @@
+:root {
+	/* marges : */
+  --margeDeLaPage: 0px;
+  --espaceEntreLesBlocs : 00px;
+
+  /* couleurs */
+  --couleurTitre : rgb(86, 20, 23);
+  --couleurDuTexte : rgb(86, 20, 23);
+  --couleurFond : rgb(224, 224, 184);
+
+  /* dimension des blocs */
+  --largeurPremierBloc : 500px;
+  --largeurAside : 250px;
+
+
+  /* taille des textes :  */
+  --fontsizeGlobal : 16px;
+  --fontSizeH1 : 40px;
+  --fontSizeH2 : 20px;
+}
+
+/*typo */
+@font-face {
+  font-family: "Texte_regular";
+  src:
+    url("../font/lineal-main/lineal-main/fonts/Static/WEB/Lineal-Regular.woff") format("woff");
+}
+
+.LandingVideo{
+	width: 70vw;
+	height: 100vh;
+}
+
+.class{
+	font-family : "Texte_regular";
+}
+
+
+@font-face {
+  font-family: "Titres";
+  src:
+    url("../font/Avara-master/Avara-master/fonts/Avara-Bold.otf") format("woff");
+}
+
+
+.class{
+	font-family : "Titres";
+}
+
+
+html{
+	font-family: "Texte_regular";
+	font-size: var(--fontsizeGlobal);
+ height: 100vh;
+ overflow-y: hidden;
+ display: flex;
+ background-color: var(--couleurFond);
+ color: var(--couleurDuTexte);
+}
+
+*{
+	box-sizing: border-box;
+}
+
+header{
+	width: var(--largeurPremierBloc);
+	background-color: rgb(224, 224, 184);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+aside{
+	width: var(--largeurAside)
+}
+
+h1{
+	font-family: "Titres";
+	color: var(--couleurTitre);
+	font-size: var(--fontSizeH1);
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+h2{
+	font-family: "Titres";
+	color: var(--couleurTitre);
+	font-size: var(--fontSizeH2);
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+body{
+	display: flex;
+	height: 100%;
+	padding: var(--margeDeLaPage);
+	position: relative;
+}
+
+body>*{
+	margin-right: var(--espaceEntreLesBlocs);
+}
+
+.galerie_horizontale{
+	  width: auto;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.galerie_horizontale>*{
+	  width: auto;
+  height: 30%;
+  position: relative;
+}
+
+.fullPage{
+	height: 100vh;
+	position: relative;
+	top: calc( var(--margeDeLaPage)* -1 );
+}
+
+.smallTitle {
+  color:  rgb(142, 125, 80);
+  font-size: 14px;   /* taille du texte */
+  padding-top: 100px;
+
+}
+
+.smallText {
+  color:  rgb(142, 125, 80);
+  font-size: 8px;   /* taille du texte */
+  line-height: 1.4;  /* optionnel, pour garder la lisibilité */
+}
+
+
+figure,video{
+	height: 100%;
+	width: auto;
+}
+
+
+figcaption{
+	font-style: italic;
+}
+
+
+/* canvas{display: none;} */
+
+

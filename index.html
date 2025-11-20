@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- empêcher le référencement -->
+<meta name="robots" content="noindex, nofollow, noarchive" />
+
+<title>P5js intro</title>
+
+<!-- pour les mobiles -->
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0" />
+
+<!-- style -->
+ <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body class="scroll-container">
+	<header>
+    <h1>Érosion Numérique</h1>
+    <p>
+      Érosion Numérique explore la rencontre entre des objets anciens — de vieilles pièces de monnaie — et leur transformation par le code créatif. 
+      À partir d’images d’archives, divers traitements créatifs réalisés en p5.js reproduisent les marques laissées par le temps et l’usage : 
+      découpages irréguliers, effets de seuil, zones de corrosion simulée, glitchs et altérations visuelles inspirées de l’oxydation, 
+      de l’érosion et des abrasions physiques.
+      <br>
+      <br>
+      L’ensemble met en parallèle deux formes d’usure : celle, matérielle, qui affecte les pièces au fil des manipulations et du vieillissement, 
+      et celle, numérique, qui apparaît lorsque l’image est soumise à des distorsions ou à des erreurs générées par le code. En associant 
+      ces dégradations physiques et digitales, le projet interroge la manière dont le temps transforme les objets et comment le numérique peut, 
+      à son tour, produire ses propres formes d’altération. Les pièces deviennent alors des artefacts hybrides, oscillant entre passé matériel 
+      et fragmentation algorithmique.
+    </p>
+     <br>
+     <br>
+     <br>
+       <h2 class="smallTitle">Sources :</h2>
+       <p class="smallText">
+        source 1 : https://gallica.bnf.fr/ark:/12148/btv1b113114395<br>
+        source 2 : https://gallica.bnf.fr/ark:/12148/btv1b11309171j?rk=600861;2 <br>
+        source 3 : https://gallica.bnf.fr/ark:/12148/btv1b11309077v?rk=2038636;4 <br>
+       </p> 
+  </header>
+  
+<div>
+  
+  <video class="video-container" autoplay muted loop>
+    <source src="images/Landing_Background.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas les vidéos HTML5.
+  </video>
+  
+</div class>
+</body>
+
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 1.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 2.0.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 2.1.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 3.0.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 3.1.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 3.2.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 4.0.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 5.0.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 5.1.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 5.3.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 5.4.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 6.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 7.0.mp4" loop="true"></video>
+<video  autoplay="true" muted="true" src="images/Animation 7.1.mp4" loop="true"></video>
+<video class="hoverPlay" autoplay="true" muted="true" src="images/Animation 8.mp4" loop="true"></video>  
+
+</html>
+
+
+
+<!-- ne pas toucher  -->
+<script>
+const container = document.querySelector('html');
+document.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    container.scrollLeft += e.deltaY;
+}, { passive: false });
+
+const video = document.querySelectorAll('.hoverPlay');
+video.forEach((v) => {
+  v.addEventListener('mouseenter', () => {
+  v.play();
+});
+v.addEventListener('mouseleave', () => {
+  v.pause();
+  v.currentTime = 0; // revient au début
+});
+})
+
+</script>
